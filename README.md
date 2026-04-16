@@ -1,58 +1,54 @@
-<h1 align="center">Agent Skills by Anton Novoselov</h1>
+# Skills
 
-<p align="center">
-    <a href="https://agentskills.io/home">
-        <img src="https://img.shields.io/badge/Agent%20Skills-Compatible-purple.svg" alt="Agent Skills Compatible" />
-    </a>
-    <img src="https://img.shields.io/badge/license-MIT-lightgrey.svg" alt="MIT License" />
-</p>
-
-A curated collection of agent skills for Claude Code, Codex, Gemini, Cursor, and more.
-
+A collection of agent skills for Claude Code, Codex, Gemini, Cursor, and more.
 
 ## Available Skills
 
-| Skill | Description |
-|-------|-------------|
-| [git-codebase-preflight](https://github.com/n0an/git-codebase-preflight-skill) | Audits a repository through git history before reading source files |
-| [swift-format-style](https://github.com/n0an/Swift-FormatStyle-Agent-Skill) | Reviews and writes modern Swift FormatStyle code with `.formatted()` APIs |
+### [git-codebase-preflight](https://github.com/n0an/git-codebase-preflight-skill)
 
+Audits a repository through git history before reading source files.
 
-## Installing
+- Analyzes commit frequency, active contributors, and project timeline
+- Identifies hot files and recently changed areas
+- Detects large files, binary assets, and repo structure
+- Provides a prioritized list of files to inspect first
+- Works on any Git repository without reading source code
+
+### [swift-format-style](https://github.com/n0an/Swift-FormatStyle-Agent-Skill)
+
+Reviews and writes modern Swift FormatStyle code with `.formatted()` APIs.
+
+- Covers Date, Number, Measurement, and custom FormatStyle types
+- Generates correct `.formatted()` calls with proper modifiers
+- Reviews existing FormatStyle code for best practices
+- Replaces legacy DateFormatter/NumberFormatter patterns
+- Supports iOS 15+ / macOS 12+ APIs
+
+## Installation
+
+### Any Agent (via [skills.sh](https://skills.sh))
+
+```bash
+npx skills add n0an/skills
+```
+
+To install a single skill:
+
+```bash
+npx skills add n0an/skills --skill git-codebase-preflight
+npx skills add n0an/skills --skill swift-format-style
+```
 
 ### Claude Code
 
 ```bash
-# Register the marketplace
 /plugin marketplace add n0an/skills
-
-# Install a specific skill
-/plugin install git-codebase-preflight@n0an/skills
-/plugin install swift-format-style@n0an/skills
 ```
 
-Or install individual skills directly:
+## Author
 
-```bash
-/plugin install n0an/git-codebase-preflight-skill
-/plugin install n0an/Swift-FormatStyle-Agent-Skill
-```
-
-### Gemini
-
-```bash
-gemini extensions install https://github.com/n0an/git-codebase-preflight-skill.git --consent
-gemini extensions install https://github.com/n0an/Swift-FormatStyle-Agent-Skill.git --consent
-```
-
-### npx (Claude Code, Codex, Gemini, Cursor)
-
-```bash
-npx skills add https://github.com/n0an/git-codebase-preflight-skill --skill git-codebase-preflight
-npx skills add https://github.com/n0an/Swift-FormatStyle-Agent-Skill --skill swift-format-style
-```
-
+Anton Novoselov, https://github.com/n0an
 
 ## License
 
-All skills are available under the [MIT License](https://opensource.org/licenses/MIT).
+The project is available under the MIT license. See the [LICENSE](./LICENSE) file for more info.
