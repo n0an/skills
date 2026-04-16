@@ -1,0 +1,26 @@
+{
+  "name": "n0an/skills",
+  "owner": {
+    "name": "Anton Novoselov"
+  },
+  "plugins": [
+    {
+      "name": "git-codebase-preflight",
+      "source": {
+        "source": "github",
+        "repo": "n0an/git-codebase-preflight-skill"
+      },
+      "description": "Audits a repository through git history before reading source files",
+      "version": "1.0.0"
+    },
+    {
+      "name": "swift-format-style",
+      "source": {
+        "source": "github",
+        "repo": "n0an/Swift-FormatStyle-Agent-Skill"
+      },
+      "description": "Reviews and writes modern Swift FormatStyle code with .formatted() APIs",
+      "version": "1.0.0"
+    }
+  ]
+}
