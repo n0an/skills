@@ -1,5 +1,8 @@
 # Skills
 
+[![Agent Skills Compatible](https://img.shields.io/badge/Agent%20Skills-Compatible-purple.svg)](https://agentskills.io/home)
+![MIT License](https://img.shields.io/badge/license-MIT-lightgrey.svg)
+
 A collection of agent skills for Claude Code, Codex, Gemini, Cursor, and more.
 
 ## Available Skills
