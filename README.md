@@ -27,6 +27,17 @@ Reviews and writes modern Swift FormatStyle code with `.formatted()` APIs.
 - Replaces legacy DateFormatter/NumberFormatter patterns
 - Supports iOS 15+ / macOS 12+ APIs
 
+### [app-intents](https://github.com/n0an/App-Intents-Agent-Skill)
+
+Reviews and writes Swift App Intents code for Siri, Shortcuts, Spotlight, widgets, Control Center, and Apple Intelligence.
+
+- Covers `AppIntent`, `AppEntity`, `IndexedEntity`, `TransientAppEntity`, `FileEntity`, and all query types (`EntityQuery`, `EntityStringQuery`, `EnumerableEntityQuery`, `EntityPropertyQuery`, `IntentValueQuery`)
+- Handles the full snippet-intent lifecycle: `ShowsSnippetView`, `ShowsSnippetIntent`, `SnippetIntent`, `Button(intent:)`, multi-step interactive confirmation
+- Apple Intelligence integration via `@AppIntent(schema:)`, `@AppEntity(schema:)`, `@AppEnum(schema:)` across `.photos.*`, `.journal.*`, `.mail.*`, `.browser.*`, `.visualIntelligence.*`
+- Widget and Control Center wiring: `WidgetConfigurationIntent`, `ControlConfigurationIntent`, App Group shared storage, `WidgetCenter.reloadAllTimelines()`
+- Catches ~35 common mistakes LLMs make, from `@Model` as `AppEntity` to missing `@Property`, stale shortcut parameters, and mutation inside `SnippetIntent.perform()`
+- Supports iOS 16+ / macOS 13+ with iOS 19+ additions (`supportedModes`, `continueInForeground`, `requestChoice`, snippet `reload()`)
+
 ## Installation
 
 ### Any Agent (via [skills.sh](https://skills.sh))
@@ -40,6 +51,7 @@ To install a single skill:
 ```bash
 npx skills add n0an/skills --skill git-codebase-preflight
 npx skills add n0an/skills --skill swift-format-style
+npx skills add n0an/skills --skill app-intents
 ```
 
 ### Claude Code

@@ -21,6 +21,15 @@
       },
       "description": "Reviews and writes modern Swift FormatStyle code with .formatted() APIs",
       "version": "1.0.0"
+    },
+    {
+      "name": "app-intents",
+      "source": {
+        "source": "github",
+        "repo": "n0an/App-Intents-Agent-Skill"
+      },
+      "description": "Reviews and writes Swift App Intents code for Siri, Shortcuts, Spotlight, widgets, Control Center, and Apple Intelligence",
+      "version": "1.0.0"
     }
   ]
 }
