@@ -30,6 +30,15 @@
       },
       "description": "Reviews and writes Swift App Intents code for Siri, Shortcuts, Spotlight, widgets, Control Center, and Apple Intelligence",
       "version": "1.0.0"
+    },
+    {
+      "name": "ffmpeg",
+      "source": {
+        "source": "github",
+        "repo": "n0an/ffmpeg-skill"
+      },
+      "description": "Categorized FFmpeg recipes for video automation pipelines: convert, trim, mix, overlay, encode",
+      "version": "1.0.0"
     }
   ]
 }

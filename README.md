@@ -38,6 +38,17 @@ Reviews and writes Swift App Intents code for Siri, Shortcuts, Spotlight, widget
 - Catches ~35 common mistakes LLMs make, from `@Model` as `AppEntity` to missing `@Property`, stale shortcut parameters, and mutation inside `SnippetIntent.perform()`
 - Supports iOS 16+ / macOS 13+ with iOS 19+ additions (`supportedModes`, `continueInForeground`, `requestChoice`, snippet `reload()`)
 
+### [ffmpeg](https://github.com/n0an/ffmpeg-skill)
+
+Categorized FFmpeg recipes for video automation pipelines, adapted from the Rendi FFmpeg cheatsheet.
+
+- Format conversion, resize with aspect-ratio padding, frame-accurate trimming
+- Audio processing: replace, extract, mix, crossfade, normalize, downsample for speech-to-text (16 kHz mono)
+- Advanced editing: playback speed without pitch shift, jump cuts, social-media cropping, drawtext, subtitle burn-in, watermarking, vstack, intro/main/outro assembly
+- Asset generation: image-to-video, slideshows with `xfade`, Ken Burns `zoompan`, looping GIFs, scene-change thumbnails, tiled storyboards
+- Encoding tuning: CRF/preset guidance for libx264, libx265 with `hvc1` for Apple AirDrop, libvpx-vp9 for the web, `+faststart`, hardware acceleration (`*_nvenc`, `*_qsv`, VAAPI)
+- Bakes in common FFmpeg footguns: `-c copy` rules, input vs output seeking, `setpts=PTS-STARTPTS` after `trim`, `setsar=1:1` after pad, `-pix_fmt yuv420p` for QuickTime
+
 ## Installation
 
 ### Any Agent (via [skills.sh](https://skills.sh))
@@ -52,6 +63,7 @@ To install a single skill:
 npx skills add n0an/skills --skill git-codebase-preflight
 npx skills add n0an/skills --skill swift-format-style
 npx skills add n0an/skills --skill app-intents
+npx skills add n0an/skills --skill ffmpeg
 ```
 
 ### Claude Code
