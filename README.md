@@ -7,27 +7,9 @@ A collection of agent skills for Claude Code, Codex, Gemini, Cursor, and more.
 
 ## Available Skills
 
-### [git-codebase-preflight](https://github.com/n0an/git-codebase-preflight-skill)
+### iOS
 
-Audits a repository through git history before reading source files.
-
-- Analyzes commit frequency, active contributors, and project timeline
-- Identifies hot files and recently changed areas
-- Detects large files, binary assets, and repo structure
-- Provides a prioritized list of files to inspect first
-- Works on any Git repository without reading source code
-
-### [swift-format-style](https://github.com/n0an/Swift-FormatStyle-Agent-Skill)
-
-Reviews and writes modern Swift FormatStyle code with `.formatted()` APIs.
-
-- Covers Date, Number, Measurement, and custom FormatStyle types
-- Generates correct `.formatted()` calls with proper modifiers
-- Reviews existing FormatStyle code for best practices
-- Replaces legacy DateFormatter/NumberFormatter patterns
-- Supports iOS 15+ / macOS 12+ APIs
-
-### [app-intents](https://github.com/n0an/App-Intents-Agent-Skill)
+#### [app-intents](https://github.com/n0an/App-Intents-Agent-Skill)
 
 Reviews and writes Swift App Intents code for Siri, Shortcuts, Spotlight, widgets, Control Center, and Apple Intelligence.
 
@@ -38,7 +20,29 @@ Reviews and writes Swift App Intents code for Siri, Shortcuts, Spotlight, widget
 - Catches ~35 common mistakes LLMs make, from `@Model` as `AppEntity` to missing `@Property`, stale shortcut parameters, and mutation inside `SnippetIntent.perform()`
 - Supports iOS 16+ / macOS 13+ with iOS 19+ additions (`supportedModes`, `continueInForeground`, `requestChoice`, snippet `reload()`)
 
-### [ffmpeg](https://github.com/n0an/ffmpeg-skill)
+#### [swift-format-style](https://github.com/n0an/Swift-FormatStyle-Agent-Skill)
+
+Reviews and writes modern Swift FormatStyle code with `.formatted()` APIs.
+
+- Covers Date, Number, Measurement, and custom FormatStyle types
+- Generates correct `.formatted()` calls with proper modifiers
+- Reviews existing FormatStyle code for best practices
+- Replaces legacy DateFormatter/NumberFormatter patterns
+- Supports iOS 15+ / macOS 12+ APIs
+
+### Other
+
+#### [git-codebase-preflight](https://github.com/n0an/git-codebase-preflight-skill)
+
+Audits a repository through git history before reading source files.
+
+- Analyzes commit frequency, active contributors, and project timeline
+- Identifies hot files and recently changed areas
+- Detects large files, binary assets, and repo structure
+- Provides a prioritized list of files to inspect first
+- Works on any Git repository without reading source code
+
+#### [ffmpeg](https://github.com/n0an/ffmpeg-skill)
 
 Categorized FFmpeg recipes for video automation pipelines, adapted from the Rendi FFmpeg cheatsheet.
 
@@ -60,9 +64,9 @@ npx skills add n0an/skills
 To install a single skill:
 
 ```bash
-npx skills add n0an/skills --skill git-codebase-preflight
-npx skills add n0an/skills --skill swift-format-style
 npx skills add n0an/skills --skill app-intents
+npx skills add n0an/skills --skill swift-format-style
+npx skills add n0an/skills --skill git-codebase-preflight
 npx skills add n0an/skills --skill ffmpeg
 ```
 
