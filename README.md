@@ -30,6 +30,16 @@ Reviews and writes modern Swift FormatStyle code with `.formatted()` APIs.
 - Replaces legacy DateFormatter/NumberFormatter patterns
 - Supports iOS 15+ / macOS 12+ APIs
 
+#### [background-execution](https://github.com/n0an/Background-Execution-Agent-Skill)
+
+Reviews and writes Swift background-execution code that runs while the app is backgrounded or suspended.
+
+- Covers `BGTaskScheduler`: `BGAppRefreshTask`, `BGProcessingTask`, and `BGContinuedProcessingTask` (iOS 26), with registration timing, `Info.plist` identifiers, expiration, and `setTaskCompleted`
+- `beginBackgroundTask` / `endBackgroundTask` assertions and `ProcessInfo.performExpiringActivity` for finishing in-flight work
+- Background `URLSession` downloads and uploads, including the full `handleEventsForBackgroundURLSession` relaunch flow
+- Silent and VoIP push, the `UIBackgroundModes` matrix, background audio, and the SwiftUI `.backgroundTask` modifier
+- macOS schedulers (`NSBackgroundActivityScheduler`, `beginActivity`) and the system constraints that decide whether background work runs at all
+
 ### Other
 
 #### [git-codebase-preflight](https://github.com/n0an/git-codebase-preflight-skill)
@@ -66,6 +76,7 @@ To install a single skill:
 ```bash
 npx skills add n0an/skills --skill app-intents
 npx skills add n0an/skills --skill swift-format-style
+npx skills add n0an/skills --skill background-execution
 npx skills add n0an/skills --skill git-codebase-preflight
 npx skills add n0an/skills --skill ffmpeg
 ```

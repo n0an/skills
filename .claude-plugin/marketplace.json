@@ -32,6 +32,15 @@
       "version": "1.0.0"
     },
     {
+      "name": "background-execution",
+      "source": {
+        "source": "github",
+        "repo": "n0an/Background-Execution-Agent-Skill"
+      },
+      "description": "Reviews and writes Swift background-execution code: BGTaskScheduler, background URLSession, task assertions, push, and background modes",
+      "version": "1.0.0"
+    },
+    {
       "name": "ffmpeg",
       "source": {
         "source": "github",
