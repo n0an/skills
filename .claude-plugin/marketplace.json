@@ -48,6 +48,15 @@
       },
       "description": "Categorized FFmpeg recipes for video automation pipelines: convert, trim, mix, overlay, encode",
       "version": "1.0.0"
+    },
+    {
+      "name": "rich-html",
+      "source": {
+        "source": "github",
+        "repo": "n0an/rich-html-skill"
+      },
+      "description": "Renders content as a polished, self-contained HTML deck or document with Mermaid diagrams, cards, tables, and download buttons instead of plain Markdown",
+      "version": "1.0.0"
     }
   ]
 }
