@@ -41,6 +41,15 @@
       "version": "1.0.0"
     },
     {
+      "name": "widgets",
+      "source": {
+        "source": "github",
+        "repo": "n0an/Widgets-Agent-Skill"
+      },
+      "description": "Reviews and writes Swift WidgetKit code: Home Screen, Lock Screen, and watch widgets, Controls, Live Activities, accented/tinted rendering, Smart Stack relevance, push updates, and SiriKit/ClockKit migration",
+      "version": "1.0.0"
+    },
+    {
       "name": "ffmpeg",
       "source": {
         "source": "github",

@@ -40,6 +40,17 @@ Reviews and writes Swift background-execution code that runs while the app is ba
 - Silent and VoIP push, the `UIBackgroundModes` matrix, background audio, and the SwiftUI `.backgroundTask` modifier
 - macOS schedulers (`NSBackgroundActivityScheduler`, `beginActivity`) and the system constraints that decide whether background work runs at all
 
+#### [widgets](https://github.com/n0an/Widgets-Agent-Skill)
+
+Reviews and writes SwiftUI WidgetKit code across every widget surface.
+
+- Covers all widget kinds: Home Screen, Lock Screen / accessory, and watch widgets, plus Controls (Control Center, Lock Screen, Action button), Live Activities, and the Dynamic Island
+- Timeline model: `TimelineProvider` / `AppIntentTimelineProvider`, reload policies and the daily reload budget, `WidgetCenter` reloads, and push-updated widgets (`WidgetPushHandler`)
+- Renders correctly in every appearance: `widgetRenderingMode`, `widgetAccentable()`, `widgetAccentedRenderingMode`, and the luminance-to-alpha trick for the tinted/accented Home & Lock Screen
+- Interactivity and Controls: `Button(intent:)` / `Toggle(intent:)`, `ControlWidgetToggle` (`SetValueIntent`) vs `ControlWidgetButton`, the app-process boundary, and the App Group store
+- Live Activities: `ActivityAttributes` / `ContentState`, `ActivityConfiguration`, `DynamicIsland`, push (token / channel / push-to-start), and `supplementalActivityFamilies` for Apple Watch and CarPlay
+- Spans WWDC 2020-2026 with the SiriKit `.intentdefinition` to App Intents and ClockKit to WidgetKit migration map, ~40 anti-patterns, and a worked end-to-end example; supports iOS 14+ / iPadOS / macOS / watchOS / visionOS
+
 ### Other
 
 #### [git-codebase-preflight](https://github.com/n0an/git-codebase-preflight-skill)
@@ -63,6 +74,16 @@ Categorized FFmpeg recipes for video automation pipelines, adapted from the Rend
 - Encoding tuning: CRF/preset guidance for libx264, libx265 with `hvc1` for Apple AirDrop, libvpx-vp9 for the web, `+faststart`, hardware acceleration (`*_nvenc`, `*_qsv`, VAAPI)
 - Bakes in common FFmpeg footguns: `-c copy` rules, input vs output seeking, `setpts=PTS-STARTPTS` after `trim`, `setsar=1:1` after pad, `-pix_fmt yuv420p` for QuickTime
 
+#### [rich-html](https://github.com/n0an/rich-html-skill)
+
+Renders content as a polished, self-contained HTML deck or document instead of plain Markdown.
+
+- Produces two single-file output profiles: a fullscreen **Deck** (keyboard / click / swipe navigation, progress bar, counter) and a long-scrolling **Document** (sections, tables, legends, inline diagrams)
+- Mermaid diagrams (flowcharts, sequence, dependency graphs) themed to match the page, with the slide-visibility render gotcha already solved
+- Expressive layout out of the box: cards, big-stat numbers, callout notes, pills, flow steps, and tables
+- Download buttons that link the best experiment, result JSON, or full log straight from the page
+- A cohesive GitHub-dark design system; ideal for recaps of long runs, showcases, pitches, architecture write-ups, reports, and specs
+
 ## Installation
 
 ### Any Agent (via [skills.sh](https://skills.sh))
@@ -77,8 +98,10 @@ To install a single skill:
 npx skills add n0an/skills --skill app-intents
 npx skills add n0an/skills --skill swift-format-style
 npx skills add n0an/skills --skill background-execution
+npx skills add n0an/skills --skill widgets
 npx skills add n0an/skills --skill git-codebase-preflight
 npx skills add n0an/skills --skill ffmpeg
+npx skills add n0an/skills --skill rich-html
 ```
 
 ### Claude Code
