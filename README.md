@@ -84,6 +84,17 @@ Renders content as a polished, self-contained HTML deck or document instead of p
 - Download buttons that link the best experiment, result JSON, or full log straight from the page
 - A cohesive GitHub-dark design system; ideal for recaps of long runs, showcases, pitches, architecture write-ups, reports, and specs
 
+#### [simplified-technical-language](https://github.com/n0an/simplified-technical-language)
+
+Writes, rewrites, and reviews technical text with the [ASD-STE100 Simplified Technical English](https://www.asd-ste100.org/about_STE.html) rules - the controlled language standard born in aviation maintenance.
+
+- Three modes: write new procedures/descriptions, rewrite existing text into STE, or review text and report rule violations
+- Enforces the core limits: 20-word procedural / 25-word descriptive sentences, 6-sentence paragraphs, one instruction per sentence, 3-noun clusters
+- Controls vocabulary: one word one meaning, part-of-speech control, a substitutions table for the frequent offenders ("prior to commencing" becomes "before you start")
+- Grammar discipline: approved verb forms only, no -ing verb forms, no "shall/should/may", mandatory active voice and imperatives in procedures
+- Structures safety text: WARNING vs CAUTION vs NOTE, command-first warnings, conditions before commands
+- Ends every rewrite with a rule-by-rule compliance checklist instead of trusting text that merely looks compliant
+
 ## Installation
 
 ### Any Agent (via [skills.sh](https://skills.sh))
@@ -102,6 +113,7 @@ npx skills add n0an/skills --skill widgets
 npx skills add n0an/skills --skill git-codebase-preflight
 npx skills add n0an/skills --skill ffmpeg
 npx skills add n0an/skills --skill rich-html
+npx skills add n0an/skills --skill simplified-technical-language
 ```
 
 ### Claude Code

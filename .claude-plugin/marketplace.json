@@ -66,6 +66,15 @@
       },
       "description": "Renders content as a polished, self-contained HTML deck or document with Mermaid diagrams, cards, tables, and download buttons instead of plain Markdown",
       "version": "1.0.0"
+    },
+    {
+      "name": "simplified-technical-language",
+      "source": {
+        "source": "github",
+        "repo": "n0an/simplified-technical-language"
+      },
+      "description": "Writes, rewrites, and reviews technical text with the ASD-STE100 Simplified Technical English rules",
+      "version": "1.0.0"
     }
   ]
 }
