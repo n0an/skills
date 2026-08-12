@@ -75,6 +75,15 @@
       },
       "description": "Writes, rewrites, and reviews technical text with the ASD-STE100 Simplified Technical English rules",
       "version": "1.0.0"
+    },
+    {
+      "name": "x-twitter-scraper",
+      "source": {
+        "source": "github",
+        "repo": "Xquik-dev/x-twitter-scraper"
+      },
+      "description": "Guides structured X/Twitter search, timelines, follower exports, media, webhooks, and confirmation-gated publishing",
+      "version": "1.0.0"
     }
   ]
 }

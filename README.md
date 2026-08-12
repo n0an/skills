@@ -95,6 +95,15 @@ Writes, rewrites, and reviews technical text with the [ASD-STE100 Simplified Tec
 - Structures safety text: WARNING vs CAUTION vs NOTE, command-first warnings, conditions before commands
 - Ends every rewrite with a rule-by-rule compliance checklist instead of trusting text that merely looks compliant
 
+#### [x-twitter-scraper](https://github.com/Xquik-dev/x-twitter-scraper)
+
+Guides structured X/Twitter workflows while separating read operations from
+confirmation-gated publishing.
+
+- Covers tweet search, public timelines, follower exports, and media downloads
+- Supports REST, MCP, webhook, and SDK workflows
+- Requires confirmation before posting, replying, or changing account state
+
 ## Installation
 
 ### Any Agent (via [skills.sh](https://skills.sh))
@@ -114,6 +123,7 @@ npx skills add n0an/skills --skill git-codebase-preflight
 npx skills add n0an/skills --skill ffmpeg
 npx skills add n0an/skills --skill rich-html
 npx skills add n0an/skills --skill simplified-technical-language
+npx skills add n0an/skills --skill x-twitter-scraper
 ```
 
 ### Claude Code
