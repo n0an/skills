@@ -50,6 +50,15 @@
       "version": "1.0.0"
     },
     {
+      "name": "observability",
+      "source": {
+        "source": "github",
+        "repo": "n0an/Observability-Agent-Skill"
+      },
+      "description": "Reviews and writes Swift observability code: unified logging, signposts, MetricKit, crash reporting and symbolication, network telemetry, and production monitoring pipelines",
+      "version": "1.0.0"
+    },
+    {
       "name": "ffmpeg",
       "source": {
         "source": "github",

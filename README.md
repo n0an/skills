@@ -51,6 +51,17 @@ Reviews and writes SwiftUI WidgetKit code across every widget surface.
 - Live Activities: `ActivityAttributes` / `ContentState`, `ActivityConfiguration`, `DynamicIsland`, push (token / channel / push-to-start), and `supplementalActivityFamilies` for Apple Watch and CarPlay
 - Spans WWDC 2020-2026 with the SiriKit `.intentdefinition` to App Intents and ClockKit to WidgetKit migration map, ~40 anti-patterns, and a worked end-to-end example; supports iOS 14+ / iPadOS / macOS / watchOS / visionOS
 
+#### [observability](https://github.com/n0an/Observability-Agent-Skill)
+
+Reviews and writes Swift observability code - logging, metrics, diagnostics, and production telemetry on Apple platforms.
+
+- Covers unified logging (`Logger`, levels and persistence rules, privacy redaction), Console.app and the `log` CLI with scripted simulator/device capture workflows, and `OSLogStore` support-log export
+- Signpost instrumentation (`OSSignposter`, Instruments, `xctrace`, `mxSignpost` field histograms) plus activity tracing and correlation IDs
+- MetricKit end to end: `MXMetricManager` payloads and diagnostics through the iOS 27 Swift-native `MetricManager`, launch histograms, hang and exit-reason tracking
+- Crash, hang, and OOM observability: watchdog codes, jetsam's missing crash reports, the hang tooling matrix, and symbolication (dSYM/UUID contract, `atos`, MetricKit call stacks)
+- Request-level network telemetry (`URLSessionTaskMetrics`, error taxonomy, non-fatal report design) and production pipelines (App Store Connect Power and Performance API, OpenTelemetry)
+- Third-party SDK integration rules (one crash handler, dSYM upload, breadcrumb bridging) and ~33 anti-pattern catches; supports iOS 14+ / macOS
+
 ### Other
 
 #### [git-codebase-preflight](https://github.com/n0an/git-codebase-preflight-skill)
@@ -110,6 +121,7 @@ npx skills add n0an/skills --skill app-intents
 npx skills add n0an/skills --skill swift-format-style
 npx skills add n0an/skills --skill background-execution
 npx skills add n0an/skills --skill widgets
+npx skills add n0an/skills --skill observability
 npx skills add n0an/skills --skill git-codebase-preflight
 npx skills add n0an/skills --skill ffmpeg
 npx skills add n0an/skills --skill rich-html
