@@ -62,6 +62,18 @@ Reviews and writes Swift observability code - logging, metrics, diagnostics, and
 - Request-level network telemetry (`URLSessionTaskMetrics`, error taxonomy, non-fatal report design) and production pipelines (App Store Connect Power and Performance API, OpenTelemetry)
 - Third-party SDK integration rules (one crash handler, dSYM upload, breadcrumb bridging) and ~33 anti-pattern catches; supports iOS 14+ / macOS
 
+### Workflows
+
+#### [agent-gauntlet](https://github.com/n0an/agent-gauntlet)
+
+Runs a user story through a fixed pipeline of fresh-context subagents with deterministic quality gates - Uncle Bob's "run the gauntlet" agent workflow.
+
+- Five stages: **specifier** (Gherkin acceptance scenarios + QA procedure), **coder** (tests + implementation to green), **cleaner** (complexity + coverage), **hardener** (mutation testing), optional **qa** agent
+- Gates are numbers, not opinions: 100% tests green, complexity warn 6 / fail 8, coverage floor 70%, zero unjustified surviving mutants
+- Fresh context per stage, handoff through files; spec files are throwaway scaffolding that lives for one story cycle
+- Doubles as a Claude Code plugin: `/plugin marketplace add n0an/agent-gauntlet`, then `/gauntlet <story>`
+- Swift-first gate scripts (SwiftLint, muter) with documented equivalents for JS/Python/JVM/Rust (Stryker, mutmut, PIT, cargo-mutants)
+
 ### Other
 
 #### [git-codebase-preflight](https://github.com/n0an/git-codebase-preflight-skill)
@@ -126,6 +138,12 @@ npx skills add n0an/skills --skill git-codebase-preflight
 npx skills add n0an/skills --skill ffmpeg
 npx skills add n0an/skills --skill rich-html
 npx skills add n0an/skills --skill simplified-technical-language
+```
+
+The `agent-gauntlet` pipeline lives in its own repo:
+
+```bash
+npx skills add n0an/agent-gauntlet
 ```
 
 ### Claude Code
