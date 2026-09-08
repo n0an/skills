@@ -1,8 +1,9 @@
 {
-  "name": "n0an/skills",
+  "name": "n0an-skills",
   "owner": {
     "name": "Anton Novoselov"
   },
+  "description": "Agent skills and plugins by Anton Novoselov for Claude Code, Codex, Gemini, and Cursor: iOS and Swift skills plus general-purpose tooling.",
   "plugins": [
     {
       "name": "git-codebase-preflight",
@@ -29,7 +30,7 @@
         "repo": "n0an/App-Intents-Agent-Skill"
       },
       "description": "Reviews and writes Swift App Intents code for Siri, Shortcuts, Spotlight, widgets, Control Center, and Apple Intelligence",
-      "version": "1.0.0"
+      "version": "1.2.0"
     },
     {
       "name": "background-execution",
@@ -47,7 +48,7 @@
         "repo": "n0an/Widgets-Agent-Skill"
       },
       "description": "Reviews and writes Swift WidgetKit code: Home Screen, Lock Screen, and watch widgets, Controls, Live Activities, accented/tinted rendering, Smart Stack relevance, push updates, and SiriKit/ClockKit migration",
-      "version": "1.0.0"
+      "version": "1.2.0"
     },
     {
       "name": "observability",
@@ -84,6 +85,24 @@
       },
       "description": "Writes, rewrites, and reviews technical text with the ASD-STE100 Simplified Technical English rules",
       "version": "1.0.0"
+    },
+    {
+      "name": "ios-essential-developer-skill",
+      "source": {
+        "source": "github",
+        "repo": "n0an/ios-essential-developer-skill"
+      },
+      "description": "iOS engineering the Essential Developer way: classicist TDD, modular design, dependency injection and rejection, the composition root, and a fast test pyramid, across five modes - design, build, test, review, refactor",
+      "version": "2.0.0"
+    },
+    {
+      "name": "agent-gauntlet",
+      "source": {
+        "source": "github",
+        "repo": "n0an/agent-gauntlet"
+      },
+      "description": "Agent pipeline with deterministic quality gates: specifier, coder, cleaner, and hardener stages looped against complexity, coverage, and mutation-testing gates. Ships the /gauntlet command and five stage subagents",
+      "version": "0.1.0"
     }
   ]
 }

@@ -62,6 +62,17 @@ Reviews and writes Swift observability code - logging, metrics, diagnostics, and
 - Request-level network telemetry (`URLSessionTaskMetrics`, error taxonomy, non-fatal report design) and production pipelines (App Store Connect Power and Performance API, OpenTelemetry)
 - Third-party SDK integration rules (one crash handler, dSYM upload, breadcrumb bridging) and ~33 anti-pattern catches; supports iOS 14+ / macOS
 
+#### [essential-developer](https://github.com/n0an/ios-essential-developer-skill)
+
+iOS engineering the Essential Developer way, across five modes: design, build, test, review, and refactor.
+
+- Classicist (Chicago-school) TDD: no mocking, behavior tested through the public interface, triangulation, watch-it-fail-first
+- Modular design and boundaries: horizontal and vertical slicing, the modular monolith, per-module DTOs, and no `@testable` across module lines
+- Dependency injection and dependency rejection, with a single composition root owning adapters, navigation, object lifetimes, and threading
+- Test technique that scales: `makeSUT`, `trackForMemoryLeaks`, spies over mocks, reusable protocol contract specs, and the full pyramid up to snapshot and end-to-end
+- Decorator / Composite / Adapter for cross-cutting concerns (auth and token refresh, analytics, feature flags) instead of edits to existing consumers
+- Point a mode at a feature, a module, a diff, or an idea; all five share one references knowledge base with a worked end-to-end example
+
 ### Workflows
 
 #### [agent-gauntlet](https://github.com/n0an/agent-gauntlet)
@@ -71,7 +82,7 @@ Runs a user story through a fixed pipeline of fresh-context subagents with deter
 - Five stages: **specifier** (Gherkin acceptance scenarios + QA procedure), **coder** (tests + implementation to green), **cleaner** (complexity + coverage), **hardener** (mutation testing), optional **qa** agent
 - Gates are numbers, not opinions: 100% tests green, complexity warn 6 / fail 8, coverage floor 70%, zero unjustified surviving mutants
 - Fresh context per stage, handoff through files; spec files are throwaway scaffolding that lives for one story cycle
-- Doubles as a Claude Code plugin: `/plugin marketplace add n0an/agent-gauntlet`, then `/gauntlet <story>`
+- Doubles as a Claude Code plugin: install it from this marketplace, then `/gauntlet <story>` drives the whole pipeline
 - Swift-first gate scripts (SwiftLint, muter) with documented equivalents for JS/Python/JVM/Rust (Stryker, mutmut, PIT, cargo-mutants)
 
 ### Other
@@ -138,18 +149,26 @@ npx skills add n0an/skills --skill git-codebase-preflight
 npx skills add n0an/skills --skill ffmpeg
 npx skills add n0an/skills --skill rich-html
 npx skills add n0an/skills --skill simplified-technical-language
+npx skills add n0an/skills --skill essential-developer
+npx skills add n0an/skills --skill agent-gauntlet
 ```
 
-The `agent-gauntlet` pipeline lives in its own repo:
+The `agent-gauntlet` pipeline also installs straight from its own repo:
 
 ```bash
-npx skills add n0an/agent-gauntlet
+npx skills add n0an/agent-gauntlet --skill agent-gauntlet
 ```
 
 ### Claude Code
 
 ```bash
 /plugin marketplace add n0an/skills
+```
+
+The marketplace registers as `n0an-skills`, so a single plugin can be installed by id:
+
+```bash
+/plugin install agent-gauntlet@n0an-skills
 ```
 
 ## Author
