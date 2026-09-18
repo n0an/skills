@@ -103,6 +103,15 @@
       },
       "description": "Agent pipeline with deterministic quality gates: specifier, coder, cleaner, and hardener stages looped against complexity, coverage, and mutation-testing gates. Ships the /gauntlet command and five stage subagents",
       "version": "0.1.0"
+    },
+    {
+      "name": "handoff",
+      "source": {
+        "source": "github",
+        "repo": "n0an/handoff-skill"
+      },
+      "description": "Ends an agent session on a numbered step file the human controls, instead of relying on context compaction, and starts the next session from it",
+      "version": "1.0.0"
     }
   ]
 }

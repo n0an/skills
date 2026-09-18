@@ -85,6 +85,16 @@ Runs a user story through a fixed pipeline of fresh-context subagents with deter
 - Doubles as a Claude Code plugin: install it from this marketplace, then `/gauntlet <story>` drives the whole pipeline
 - Swift-first gate scripts (SwiftLint, muter) with documented equivalents for JS/Python/JVM/Rust (Stryker, mutmut, PIT, cargo-mutants)
 
+#### [handoff](https://github.com/n0an/handoff-skill)
+
+Ends an agent session on a step file the human controls, instead of on context compaction, and starts the next session from it.
+
+- One numbered step file per handoff in `<repo-root>/_agent/handoff/<TICKET>/`: Goal, Done, Where we are (Verified vs Believed), Next, Session
+- `/handoff` writes the step, `/handoff resume <TICKET>` opens only the newest one and continues from it
+- `_agent/` stays out of git through `.git/info/exclude`; works from worktrees and in plain folders without git
+- Records the Claude Code session id and `claude --resume` line, so the transcript behind every claim is one command away
+- With [Orca](https://github.com/stablyai/orca) the fresh session is spawned automatically; without it you get a command to paste
+
 ### Other
 
 #### [git-codebase-preflight](https://github.com/n0an/git-codebase-preflight-skill)
@@ -151,12 +161,14 @@ npx skills add n0an/skills --skill rich-html
 npx skills add n0an/skills --skill simplified-technical-language
 npx skills add n0an/skills --skill essential-developer
 npx skills add n0an/skills --skill agent-gauntlet
+npx skills add n0an/skills --skill handoff
 ```
 
-The `agent-gauntlet` pipeline also installs straight from its own repo:
+The `agent-gauntlet` pipeline and `handoff` also install straight from their own repos:
 
 ```bash
 npx skills add n0an/agent-gauntlet --skill agent-gauntlet
+npx skills add n0an/handoff-skill --skill handoff
 ```
 
 ### Claude Code
