@@ -112,6 +112,15 @@
       },
       "description": "Ends an agent session on a numbered step file the human controls, instead of relying on context compaction, and starts the next session from it",
       "version": "1.0.0"
+    },
+    {
+      "name": "worknotes",
+      "source": {
+        "source": "github",
+        "repo": "n0an/worknotes-skill"
+      },
+      "description": "Puts an agent session's working documents - investigations, plans, review notes - in <repo-root>/_agent/docs/ with a session link, an index past four documents, and superseded banners, never in the repo's real docs",
+      "version": "1.0.0"
     }
   ]
 }

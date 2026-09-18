@@ -95,6 +95,16 @@ Ends an agent session on a step file the human controls, instead of on context c
 - Records the Claude Code session id and `claude --resume` line, so the transcript behind every claim is one command away
 - With [Orca](https://github.com/stablyai/orca) the fresh session is spawned automatically; without it you get a command to paste
 
+#### [worknotes](https://github.com/n0an/worknotes-skill)
+
+Gives every working document an agent writes during a session one home, `<repo-root>/_agent/docs/`, never the repo's real docs. Sibling of `handoff`, same excluded folder.
+
+- Investigations, root-cause write-ups, plans, drafts, review notes go to `_agent/docs/`; `docs/`, `README.md` and ADRs follow the repo's own rules
+- Every document carries the session log path and `claude --resume` line, so the reasoning behind it is one command away
+- Resolves the main checkout from any worktree, so a note written in a throwaway worktree survives it
+- Past four documents on a subject: a `README.md` index naming the canonical one and listing the conclusions that turned out wrong
+- Overturned documents get a "Superseded" banner; the body is never rewritten
+
 ### Other
 
 #### [git-codebase-preflight](https://github.com/n0an/git-codebase-preflight-skill)
@@ -162,13 +172,15 @@ npx skills add n0an/skills --skill simplified-technical-language
 npx skills add n0an/skills --skill essential-developer
 npx skills add n0an/skills --skill agent-gauntlet
 npx skills add n0an/skills --skill handoff
+npx skills add n0an/skills --skill worknotes
 ```
 
-The `agent-gauntlet` pipeline and `handoff` also install straight from their own repos:
+The `agent-gauntlet` pipeline, `handoff` and `worknotes` also install straight from their own repos:
 
 ```bash
 npx skills add n0an/agent-gauntlet --skill agent-gauntlet
 npx skills add n0an/handoff-skill --skill handoff
+npx skills add n0an/worknotes-skill --skill worknotes
 ```
 
 ### Claude Code
