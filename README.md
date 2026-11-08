@@ -73,6 +73,17 @@ iOS engineering the Essential Developer way, across five modes: design, build, t
 - Decorator / Composite / Adapter for cross-cutting concerns (auth and token refresh, analytics, feature flags) instead of edits to existing consumers
 - Point a mode at a feature, a module, a diff, or an idea; all five share one references knowledge base with a worked end-to-end example
 
+#### [apple-debugging](https://github.com/n0an/Apple-Debugging-Agent-Skill)
+
+Debugs iOS, macOS, watchOS, tvOS, and visionOS apps with LLDB and Xcode, in the running process, without rebuilding to test every guess.
+
+- The run, break, inspect, change loop: `v` vs `p` vs `po` vs `expression -l`, language contexts, `$` variables, and a map from Xcode's UI to LLDB commands
+- Every breakpoint kind with conditions, ignore counts, actions, auto-continue, dependent one-shot breakpoints, and `raise(SIGSTOP)` for hot loops
+- Live changes instead of rebuilds: inject a fix with a breakpoint action, replace a line, stub a return with `thread return`, flush Core Animation to see UI changes while paused
+- View debugging, the touch-delivery checklist, Auto Layout diagnosis, watchpoints, the memory graph, `vmmap` / `heap` / `leaks` / `malloc_history`, Zombies and sanitizers
+- Crash symbolication (dSYM and UUID matching, `atos -i`, `crashlog`, source maps) and the Swift-specific failures (`swift-healthcheck`, optimized code, `@DebugDescription`)
+- `.lldbinit` aliases, regex commands, Python commands and formatters, DTrace basics, 16 playbooks, and an anti-pattern catalog; includes a batch-mode recipe for agents driving LLDB from a terminal
+
 ### Workflows
 
 #### [agent-gauntlet](https://github.com/n0an/agent-gauntlet)
@@ -170,6 +181,7 @@ npx skills add n0an/skills --skill ffmpeg
 npx skills add n0an/skills --skill rich-html
 npx skills add n0an/skills --skill simplified-technical-language
 npx skills add n0an/skills --skill essential-developer
+npx skills add n0an/skills --skill apple-debugging
 npx skills add n0an/skills --skill agent-gauntlet
 npx skills add n0an/skills --skill handoff
 npx skills add n0an/skills --skill worknotes

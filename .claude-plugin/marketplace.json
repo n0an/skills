@@ -121,6 +121,15 @@
       },
       "description": "Puts an agent session's working documents - investigations, plans, review notes - in <repo-root>/_agent/docs/ with a session link, an index past four documents, and superseded banners, never in the repo's real docs",
       "version": "1.0.0"
+    },
+    {
+      "name": "apple-debugging",
+      "source": {
+        "source": "github",
+        "repo": "n0an/Apple-Debugging-Agent-Skill"
+      },
+      "description": "Debugs iOS, macOS, watchOS, tvOS, and visionOS apps with LLDB and Xcode: breakpoints, live state inspection and mutation, view debugging, watchpoints, memory, crash symbolication, custom LLDB commands, and DTrace",
+      "version": "1.0.0"
     }
   ]
 }
