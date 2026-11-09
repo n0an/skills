@@ -130,6 +130,15 @@
       },
       "description": "Debugs iOS, macOS, watchOS, tvOS, and visionOS apps with LLDB and Xcode: breakpoints, live state inspection and mutation, view debugging, watchpoints, memory, crash symbolication, code without source (assembly, ABI, Mach-O, runtime), hooks in your own app, attach and signing diagnostics, custom LLDB commands, and DTrace",
       "version": "1.1.0"
+    },
+    {
+      "name": "aso",
+      "source": {
+        "source": "github",
+        "repo": "n0an/ASO-Agent-Skill"
+      },
+      "description": "Audits and writes App Store Optimization for iOS apps: metadata and keywords, localizations, screenshots and product pages, custom product pages and in-app events, ratings, Apple Ads, Meta app campaigns, App Tracking Transparency, and measurement",
+      "version": "1.0.0"
     }
   ]
 }

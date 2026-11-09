@@ -86,6 +86,19 @@ Debugs iOS, macOS, watchOS, tvOS, and visionOS apps with LLDB and Xcode, in the 
 - Hooks for your own app (`dlopen`, interposing, saved-IMP swizzling) and attach diagnostics (signing, entitlements, hardened runtime, `PT_DENY_ATTACH`)
 - `.lldbinit` aliases, regex commands, Python commands and formatters, bundled helper commands, DTrace, remote debugging, `lldb-dap` and MCP, 18 playbooks, and an anti-pattern catalog; includes batch-mode recipes for agents driving LLDB from a terminal, with a deadline that keeps the trace output
 
+### App Store
+
+#### [aso](https://github.com/n0an/ASO-Agent-Skill)
+
+Audits, plans and writes App Store Optimization for iOS apps, with every mechanic checked against Apple's and Meta's own documentation and every rule dated.
+
+- Metadata and keywords: the two-stage search model, name, subtitle and keyword field rules, popularity scales, the top-5 winnability test, extra indexed localizations per storefront
+- Screenshots, product page and custom product pages: captions that reinforce keywords, header and search assets, product page optimization limits, 70 pages per app and keyword-linked pages
+- Ratings: what moves rank, when to prompt, and the App Review rules on prompts and incentives
+- Paid: Apple Ads (placements, match types, Search Match, bids, attribution) and Meta app campaigns (Advantage+ app campaigns, optimization goals, AEM and SKAdNetwork), and how both meet organic search
+- App Tracking Transparency: whether you need the prompt, Apple's pre-prompt rules, copy, timing, opt-in rates
+- Tool-agnostic: names the data each step needs and the manual fallback, never a product to buy
+
 ### Workflows
 
 #### [agent-gauntlet](https://github.com/n0an/agent-gauntlet)
@@ -184,6 +197,7 @@ npx skills add n0an/skills --skill rich-html
 npx skills add n0an/skills --skill simplified-technical-language
 npx skills add n0an/skills --skill essential-developer
 npx skills add n0an/skills --skill apple-debugging
+npx skills add n0an/skills --skill aso
 npx skills add n0an/skills --skill agent-gauntlet
 npx skills add n0an/skills --skill handoff
 npx skills add n0an/skills --skill worknotes
