@@ -128,8 +128,8 @@
         "source": "github",
         "repo": "n0an/Apple-Debugging-Agent-Skill"
       },
-      "description": "Debugs iOS, macOS, watchOS, tvOS, and visionOS apps with LLDB and Xcode: breakpoints, live state inspection and mutation, view debugging, watchpoints, memory, crash symbolication, custom LLDB commands, and DTrace",
-      "version": "1.0.0"
+      "description": "Debugs iOS, macOS, watchOS, tvOS, and visionOS apps with LLDB and Xcode: breakpoints, live state inspection and mutation, view debugging, watchpoints, memory, crash symbolication, code without source (assembly, ABI, Mach-O, runtime), hooks in your own app, attach and signing diagnostics, custom LLDB commands, and DTrace",
+      "version": "1.1.0"
     }
   ]
 }

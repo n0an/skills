@@ -82,7 +82,9 @@ Debugs iOS, macOS, watchOS, tvOS, and visionOS apps with LLDB and Xcode, in the 
 - Live changes instead of rebuilds: inject a fix with a breakpoint action, replace a line, stub a return with `thread return`, flush Core Animation to see UI changes while paused
 - View debugging, the touch-delivery checklist, Auto Layout diagnosis, watchpoints, the memory graph, `vmmap` / `heap` / `leaks` / `malloc_history`, Zombies and sanitizers
 - Crash symbolication (dSYM and UUID matching, `atos -i`, `crashlog`, source maps) and the Swift-specific failures (`swift-healthcheck`, optimized code, `@DebugDescription`)
-- `.lldbinit` aliases, regex commands, Python commands and formatters, DTrace basics, 16 playbooks, and an anti-pattern catalog; includes a batch-mode recipe for agents driving LLDB from a terminal
+- Code without source: binary slices and address translation, arm64 and x86_64 calling conventions, Mach-O, Objective-C runtime lookup, blocks, heap instances, and stripped stacks
+- Hooks for your own app (`dlopen`, interposing, saved-IMP swizzling) and attach diagnostics (signing, entitlements, hardened runtime, `PT_DENY_ATTACH`)
+- `.lldbinit` aliases, regex commands, Python commands and formatters, bundled helper commands, DTrace, remote debugging, `lldb-dap` and MCP, 18 playbooks, and an anti-pattern catalog; includes batch-mode recipes for agents driving LLDB from a terminal, with a deadline that keeps the trace output
 
 ### Workflows
 
